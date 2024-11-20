@@ -1,12 +1,8 @@
 import React from 'react';
+import Control from './component/control';
+import { PagePropType } from '@/app/type/propType';
 
-type PagePropType = {
-  params : PageParam;
-}
 
-type PageParam = {
-  id : string;
-}
 
 export default async function ListRead(props:PagePropType) {
   const {id} = props.params;
@@ -19,10 +15,7 @@ export default async function ListRead(props:PagePropType) {
         <p>Title : {datajson.title}</p>
         <p style={{'height' : '100%'}}>Body : {datajson.body}</p>
       </div>
-      <div > {/*Control하는 부분은 client Component로 다시 만들 예정 */}
-        <button>수정하기</button> 
-        <button>삭제하기</button>
-      </div>
+      <Control/>
     </div>
   );
 }

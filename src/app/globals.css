@@ -109,3 +109,10 @@ p textarea {
   align-items: center;
   background-color: beige;
 }
+
+.controlContainer button {
+  margin : 0.5rem;
+  padding-left : 0.3rem;
+  padding-right : 0.3rem;
+  font-size: 1rem;
+}
